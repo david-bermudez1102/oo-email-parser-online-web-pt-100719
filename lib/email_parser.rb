@@ -13,7 +13,7 @@ class EmailAddressParser
     if(email.include?(","))
       email.delete(",")
     end
-    email = email.reject(&:blank?)
+    email = email.reject(&:empty?)
     email = email.uniq
     email
   end
