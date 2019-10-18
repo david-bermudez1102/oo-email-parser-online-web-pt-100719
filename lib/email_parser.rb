@@ -10,9 +10,9 @@ class EmailAddressParser
 
   def parse
     email = @emails.split(/( |,)/)
-    email = email.delete(",")
-    email = email.delete("")
-    email = email.delete(" ")
+    email.delete(",")
+    email.delete("")
+    email.delete(" ")
     email
   end
 end
