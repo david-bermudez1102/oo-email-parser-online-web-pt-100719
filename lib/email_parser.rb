@@ -15,7 +15,7 @@ class EmailAddressParser
     elsif(email.include?(""))
       email.delete("")
     else(email.include?(" "))
-      email.delete("")
+      email.delete(" ")
     end
     email = email.uniq
   end
