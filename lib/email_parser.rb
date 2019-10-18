@@ -10,9 +10,8 @@ class EmailAddressParser
 
   def parse
     email = @emails.split(/( |,)/)
-    if(email.include?(","))
-      email.delete(",")
-    end
+    email = email.delete(",")
+    email = email.delete("")
     email = email.reject(&:empty?)
     email = email.uniq
     email
