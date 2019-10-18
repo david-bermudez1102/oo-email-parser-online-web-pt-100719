@@ -12,11 +12,7 @@ class EmailAddressParser
     email = @emails.split(/( |,)/)
     if(email.include?(","))
       email.delete(",")
-    elsif(email.include?(""))
-      email.delete("")
-    elsif(email.include?(/[ ]/))
-      email.delete(/[ ]/)
-    end
+    email = email.reject(empty?)
     email = email.uniq
     email
   end
