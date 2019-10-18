@@ -13,7 +13,6 @@ class EmailAddressParser
     email = email.delete(",")
     email = email.delete("")
     email = email.delete(" ")
-    email = email.uniq
     email
   end
 end
