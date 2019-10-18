@@ -13,5 +13,6 @@ class EmailAddressParser
     if(email.include?(/( |,)/))
       email.delete(/( |,)/)
     end
+    email
   end
 end
